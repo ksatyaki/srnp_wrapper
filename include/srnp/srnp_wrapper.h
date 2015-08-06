@@ -27,6 +27,8 @@ extern "C" {
 
 	void peiskmt_setRemoteStringTuple(int owner, const char* key, const char* value);
 
+	void peiskmt_setMetaTuple(int metaowner, const char* metakey, int owner, const char* key);
+
 	PeisTuple* peiskmt_getTuple(int owner,const char *key, int flags);
 
 	PeisTuple* peiskmt_getTupleIndirectly(int metaOwner, const char *metaKey, int flags);

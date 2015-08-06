@@ -45,6 +45,10 @@ extern "C" {
 		srnp::setPair(key, std::string(static_cast<const char*>(data), len));
 	}
 
+	void peiskmt_setMetaTuple(int metaowner, const char* metakey, int owner, const char* key) {
+		srnp::setMetaPair(metaowner, metakey, owner, key);
+	}
+
 	void peiskmt_setRemoteTuple(int owner, const char *key, int len, const void *data, const char *mimetype, int encoding) {
 		srnp::setRemotePair(owner, key, std::string(static_cast<const char*>(data), len));
 	}
